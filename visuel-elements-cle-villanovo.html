@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Villa Salve - Villa rental in Saint-Tropez Center, French Riviera | Villanovo</title>
+    <meta name="description" content="Superb 7-bedroom villa in the heart of Saint-Tropez Center on the Côte d'Azur. Heated swimming pool, terrace, balconies, petanque area, garden and cinema room.">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+        
+        .col-8 {
+            flex: 0 0 66.666%;
+            padding: 0 10px;
+        }
+        
+        .col-4 {
+            flex: 0 0 33.333%;
+            padding: 0 10px;
+        }
+        
+        /* Header */
+        .header-one {
+            background: #fff;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 15px 0;
+        }
+        
+        .header-one .row {
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        
+        /* Hero */
+        .main-photo-wrapper {
+            position: relative;
+            height: 56vh;
+            min-height: 400px;
+            overflow: hidden;
+            background: #f0f0f0;
+        }
+        
+        .main-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .villa-photo-video {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Breadcrumbs */
+        .bread-crumbs {
+            padding: 15px 0;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .bread-crumbs a {
+            color: #666;
+            text-decoration: none;
+        }
+        
+        .bread-crumbs a:hover {
+            color: #e74c3c;
+        }
+        
+        /* Villa infos */
+        .villa-infos {
+            padding: 30px 0;
+        }
+        
+        .villa-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .villa-infos h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #333;
+            margin: 0;
+        }
+        
+        .heart-btn {
+            width: 44px;
+            height: 44px;
+            border: 2px solid #e74c3c;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .heart-btn:hover {
+            background: #e74c3c;
+        }
+        
+        .heart-btn:hover svg {
+            fill: white;
+        }
+        
+        .occupancies {
+            display: flex;
+            gap: 30px;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .occupancy-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .occupancy-max {
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .villa-intro {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin: 25px 0;
+            font-style: italic;
+        }
+        
+        /* Key highlights */
+        .key-highlights {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .key-item {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .key-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .key-item-icon--location {
+            background: rgba(52, 152, 219, 0.1);
+            color: #3498db;
+        }
+        
+        .key-item-icon--wellness {
+            background: rgba(231, 76, 60, 0.1);
+            color: #e74c3c;
+        }
+        
+        .key-item-icon--service {
+            background: rgba(39, 174, 96, 0.1);
+            color: #27ae60;
+        }
+        
+        .key-item-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 4px 0;
+        }
+        
+        .key-item-content p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        /* Booking sidebar */
+        .booking-sidebar {
+            position: sticky;
+            top: 20px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .price-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .price-amount {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        
+        .price-unit {
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .form-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        .btn-primary {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #c0392b;
+        }
+        
+        .help-text {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        .help-text a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Icons */
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        
+        .icon-lg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        /* Mobile */
+        @media (max-width: 960px) {
+            .col-8, .col-4 {
+                flex: 0 0 100%;
+            }
+            
+            .villa-infos h1 {
+                font-size: 2rem;
+            }
+            
+            .villa-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .occupancies {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .key-highlights {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .booking-sidebar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 8px 8px 0 0;
+                z-index: 100;
+            }
+            
+            .booking-form {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SVG Sprite -->
+    <svg style="display: none;">
+        <defs>
+            <symbol id="icon-camera" viewBox="0 0 24 24">
+                <path d="M9 2l1.17 1.17h3.66L15 2h4c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h4zm3 15c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0-2c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"/>
+            </symbol>
+            <symbol id="icon-map" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </symbol>
+            <symbol id="icon-heart" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </symbol>
+            <symbol id="icon-check" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </symbol>
+            <symbol id="icon-user" viewBox="0 0 24 24">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </symbol>
+            <symbol id="icon-bed" viewBox="0 0 24 24">
+                <path d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3 1.34 3 3 3zm0-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm12-3h-8v8H3V9c0-1.1.9-2 2-2h6V5c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2z"/>
+                <path d="M2 19v-3h20v3c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2z"/>
+            </symbol>
+            <symbol id="icon-bath" viewBox="0 0 24 24">
+                <path d="M7 7V3H5v4H2v2h1v8c0 2.21 1.79 4 4 4h10c2.21 0 4-1.79 4-4V9h1V7H7zm13 10c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V9h16v8z"/>
+                <circle cx="10" cy="12" r="1"/>
+                <circle cx="14" cy="12" r="1"/>
+            </symbol>
+        </defs>
+    </svg>
+
+    <!-- Header -->
+    <div class="header-one">
+        <div class="container">
+            <div class="row">
+                <a href="/" class="logo">Villanovo</a>
+                <nav>
+                    <a href="#" class="btn">Our Villas</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="main-photo-wrapper">
+        <picture>
+            <source media="(max-width: 554px)" srcset="https://imagedelivery.net/UpBbDZmjrt-WGPYbM3yOCA/9569-saint-tropez-villa-salve-view-of-the-house-63950157367bfb5a04c5ec2.67734712-114022096167bfb5a04c6167.89230937/7">
+            <source media="(min-width: 555px) and (max-width: 960px)" srcset="https://imagedelivery.net/UpBbDZmjrt-WGPYbM3yOCA/9569-saint-tropez-villa-salve-view-of-the-house-63950157367bfb5a04c5ec2.67734712-114022096167bfb5a04c6167.89230937/5">
+            <img src="https://imagedelivery.net/UpBbDZmjrt-WGPYbM3yOCA/9569-saint-tropez-villa-salve-view-of-the-house-63950157367bfb5a04c5ec2.67734712-114022096167bfb5a04c6167.89230937/1" alt="Villa Salve, rental in French Riviera">
+        </picture>
+        <div class="villa-photo-video">
+            <a href="#" class="btn btn-photos">
+                <svg class="icon"><use href="#icon-camera"></use></svg>
+                View photos (29)
+            </a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="bread-crumbs">
+            <a href="#">Home</a> » <a href="#">Villa rentals</a> » <a href="#">Europe</a> » <a href="#">France</a> » <a href="#">French Riviera</a> » <a href="#">Saint Tropez</a> » <a href="#">Saint-Tropez Center</a> » Villa Salve
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <!-- Villa infos -->
+                <div class="villa-infos">
+                    <div class="villa-header">
+                        <h1>Villa Salve</h1>
+                        <button class="heart-btn" aria-label="Add to favorites">
+                            <svg class="icon"><use href="#icon-heart"></use></svg>
+                        </button>
+                    </div>
+
+                    <div class="occupancies">
+                        <div class="occupancy-item">
+                            <svg class="icon"><use href="#icon-user"></use></svg>
+                            <span>12 <span class="occupancy-max">(13 max.)</span></span>
+                        </div>
+                        <div class="occupancy-item">
+                            <svg class="icon"><use href="#icon-bed"></use></svg>
+                            <span>7</span>
+                        </div>
+                        <div class="occupancy-item">
+                            <svg class="icon"><use href="#icon-bath"></use></svg>
+                            <span>7</span>
+                        </div>
+                    </div>
+
+                    <p class="villa-intro">
+                        « Superb 7-bedroom villa in the heart of Saint-Tropez Center on the Côte d'Azur. Heated swimming pool, terrace, balconies, petanque area, garden and cinema room. »
+                    </p>
+
+                    <!-- Key highlights (local mock) -->
+                    <div class="key-highlights" role="list" aria-label="Key highlights">
+                        <div class="key-item" role="listitem">
+                            <div class="key-item-icon key-item-icon--location">
+                                <svg class="icon"><use href="#icon-map"></use></svg>
+                            </div>
+                            <div class="key-item-content">
+                                <h3>Heart of Saint‑Tropez</h3>
+                                <p>1.5 km to downtown • Beaches at 3 km</p>
+                            </div>
+                        </div>
+                        <div class="key-item" role="listitem">
+                            <div class="key-item-icon key-item-icon--wellness">
+                                <svg class="icon"><use href="#icon-heart"></use></svg>
+                            </div>
+                            <div class="key-item-content">
+                                <h3>Private wellness</h3>
+                                <p>Heated pool • Cinema room • Fitness</p>
+                            </div>
+                        </div>
+                        <div class="key-item" role="listitem">
+                            <div class="key-item-icon key-item-icon--service">
+                                <svg class="icon"><use href="#icon-check"></use></svg>
+                            </div>
+                            <div class="key-item-content">
+                                <h3>Included services</h3>
+                                <p>Cleaning 3×/week • Pool heating • Linen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <!-- Booking sidebar -->
+                <div class="booking-sidebar">
+                    <div class="price-section">
+                        <div class="price-amount">4 884 EUR</div>
+                        <div class="price-unit">starting from / per night</div>
+                    </div>
+                    
+                    <div class="booking-form">
+                        <div class="form-row">
+                            <input type="text" class="form-input" placeholder="Arrival" readonly>
+                            <input type="text" class="form-input" placeholder="Departure" readonly>
+                        </div>
+                        <div class="form-row">
+                            <select class="form-input">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>12 Guests</option>
+                            </select>
+                            <select class="form-input">
+                                <option>7 Bedrooms</option>
+                            </select>
+                        </div>
+                        <p style="color: #e74c3c; font-size: 14px; text-align: center;">Please select your dates</p>
+                        <button class="btn-primary">ENQUIRE</button>
+                    </div>
+                    
+                    <div class="help-text">
+                        Need help booking your villa?<br>
+                        <a href="tel:+442033187269">+44 20 3318 7269</a><br>
+                        <a href="#" style="font-size: 12px;">See all prices ›</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Minimal interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Heart button toggle
+            const heartBtn = document.querySelector('.heart-btn');
+            if (heartBtn) {
+                heartBtn.addEventListener('click', function() {
+                    this.style.background = this.style.background === 'rgb(231, 76, 60)' ? 'transparent' : '#e74c3c';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
